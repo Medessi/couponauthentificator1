@@ -1,0 +1,443 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+    :root {
+        --primary-color: #3a1c71;
+        --secondary-color: #d76d77;
+        --accent-color: #ffaf7b;
+        --text-color: #ffffff;
+        --background-color: rgba(18, 18, 18, 0.8);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--background-color);
+        z-index: -1;
+    }
+
+    header {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+    }
+
+    nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--accent-color);
+    }
+
+    .language-selector {
+        position: relative;
+        display: inline-block;
+    }
+
+    .language-button {
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .language-button:hover {
+        background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .language-button img {
+        width: 24px;
+        height: 16px;
+        margin-right: 0.5rem;
+    }
+
+    .language-dropdown {
+        display: none;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 15px;
+        overflow: hidden;
+        top: 100%;
+        right: 0;
+        margin-top: 0.5rem;
+    }
+
+    .language-dropdown a {
+        color: var(--text-color);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .language-dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .show {
+        display: block;
+    }
+
+    main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        margin-top: 60px;
+    }
+
+    h1, p {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .coupon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .coupon-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        backdrop-filter: blur(5px);
+    }
+
+    .coupon-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .coupon-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+    }
+
+    .coupon-card h3 {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+    }
+
+    .social-icons a {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: var(--accent-color);
+    }
+
+    .feature-section {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease;
+        backdrop-filter: blur(5px);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--accent-color);
+    }
+
+    .dark-mode-toggle {
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .dark-mode-toggle:hover {
+        color: var(--accent-color);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+
+    .verification-form {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 15px;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 500px;
+        display: none;
+    }
+
+    .verification-form h2 {
+        margin-bottom: 1rem;
+    }
+
+    .verification-form input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--text-color);
+    }
+    .currency-select{
+      width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .verification-form button {
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        border: none;
+        color: var(--text-color);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .verification-form button:hover {
+        background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    }
+
+    @media (max-width: 768px) {
+        .coupon-grid, .feature-grid {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+    }
+
+    /* Loader Styles */
+.loader-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style global pour les notifications */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: none; /* Caché par défaut */
+    z-index: 1000; /* Assure que la notification est au-dessus du contenu */
+    display: flex;
+    align-items: center;
+}
+
+.notification .icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Style pour les notifications de succès */
+.notification.success {
+    background-color: #4CAF50; /* Couleur verte */
+}
+
+/* Style pour les notifications d'erreur */
+.notification.error {
+    background-color: #F44336; /* Couleur rouge */
+}
+
+/* Style pour les notifications d'information */
+.notification.info {
+    background-color: #2196F3; /* Couleur bleue */
+}
+
+/* Animation de l'apparition et de la disparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.notification.show {
+    display: flex;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.notification.hide {
+    animation: fadeOut 0.5s ease-in-out;
+    display: none; /* Caché après l'animation */
+}
+.styled-select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    font-size: 1rem; /* Ajustez la taille de la police si nécessaire */
+    appearance: none; /* Supprime la flèche native pour certains navigateurs */
+    -webkit-appearance: none; /* Supprime la flèche native sur Safari */
+    -moz-appearance: none; /* Supprime la flèche native sur Firefox */
+    cursor: pointer;
+    /* Ajoutez un léger ombrage pour l'effet de profondeur */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optionnel : Style pour le conteneur du sélecteur pour le centrage et l'affichage en ligne */
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
